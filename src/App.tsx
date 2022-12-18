@@ -3,8 +3,10 @@ import React from 'react';
 function App() {
   return (
     <div>
-      <div>안녕하세요</div>
-      <div>반갑습니다</div>
+      <div>Jakin's</div>
+      <div>Resume</div>
+      <div>Hi I'm Jakin,</div>
+      <div>Front-End Developer</div>
     </div>
   );
 }
