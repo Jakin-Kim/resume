@@ -1,12 +1,10 @@
 import React from 'react';
+import IntroCard from './components/IntroCard';
 
 function App() {
   return (
     <div>
-      <div>Jakin's</div>
-      <div>Resume</div>
-      <div>Hi I'm Jakin,</div>
-      <div>Front-End Developer</div>
+      <IntroCard/>
     </div>
   );
 }
