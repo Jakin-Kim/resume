@@ -1,10 +1,13 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 
 function IntroCard() {
+  const isFlipped = useState<boolean>(false);
+
   return (
     <div>
-      <Styled.container>
-        <Styled.wrapper>
+      <Styled.intro>
+        <Styled.wrapper className='wrapper'>
 
           {/* frontside */}
           <Styled.front>
@@ -16,6 +19,9 @@ function IntroCard() {
 
           {/* backside */}
           {/* <Styled.back>
+
+          </Styled.back> */}
+          <Styled.back>
             <div className='kor'>
               <div className='kor_title'>한국어</div>
               <div className='kor_title'>이력서</div>
@@ -24,10 +30,10 @@ function IntroCard() {
               <div className='eng_title'>English</div>
               <div className='eng_title'>Resume</div>
             </div>
-          </Styled.back> */}
+          </Styled.back>
 
         </Styled.wrapper>
-      </Styled.container>
+      </Styled.intro>
     </div>
   )
 }
@@ -35,16 +41,19 @@ function IntroCard() {
 export default IntroCard;
 
 const Styled = {
-  container: styled.div`
+  intro: styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    border: 1px solid black; // 삭제하기
+
+    // card flip
+    perspective: 1000px; 
   `,
 
   wrapper: styled.div`
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,11 +61,19 @@ const Styled = {
     height: 80vh;
     background-color: #E7FFFE;
     border-radius: 20px;
+    box-shadow: 3px 3px 3px #AFAFAF;
+    
+    // card flip
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
     :hover{
-      filter: drop-shadow(10px 10px 5px #AFAFAF);
       cursor: pointer;
+
+      // card flip
+      transform: rotateY(180deg);
+      box-shadow: 0px 0px 3px #AFAFAF;
     }
-    /* border: 1px solid red; // 삭제하기 */
 
     @media (max-width: 650px) {
       width: 55vw;
@@ -65,9 +82,14 @@ const Styled = {
   `,
 
   front: styled.div`
+    position: absolute;
     display:flex;
     flex-direction: column;
     align-items: center;
+
+    // card flip
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
     .title {
       padding-bottom: 10px;
@@ -84,10 +106,25 @@ const Styled = {
   `,
 
   back: styled.div`
+    position: absolute;
+    display:flex;
+    flex-direction: column;
     
-  `
+    align-items: center;
+    background-color: #F3D6D7;
 
-    
-  
+    // card flip
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
+    border-radius: 20px;
+    .kor, .eng {
+      padding-bottom: 10px;
+      font-weight: 900;
+      font-family: 'Nanumsquare', sans-serif;
+      font-size: 5vmin;
+    }
+
+  `,
 }
