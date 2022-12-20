@@ -127,15 +127,17 @@ const Styled = {
       background-color: #F3D6D7;
       width: 20vw;
       height: 30vh;
+      font-weight: 100;
       :hover {
-        position: absolute;
+        will-change: font-weight;
         box-shadow: 3px 3px 3px #AFAFAF;
         font-weight: 900;
-        transition: font-weight .5s ease-in-out;
+        transition: font-weight .35s ease-in-out;
       }
     }
 
     .kor-title, .eng-title {
+      
       font-family: 'Nanumsquare', sans-serif;
       font-size: 5vmin;
     }
