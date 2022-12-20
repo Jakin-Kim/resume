@@ -195,7 +195,7 @@ const Styled = {
         display: flex;
         flex-direction: row-reverse;
         font-size: 2.5vmin;
-        margin-right: 75px;
+        margin-right: 5vmin;
         font-size: 4vmin;
         :hover {
           cursor: pointer;
