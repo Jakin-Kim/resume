@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ImWarning } from 'react-icons/im';
+import { RiDeleteBack2Line } from 'react-icons/ri';
 
 function IntroCard() {
   const navigate = useNavigate();
+  const [isWorking, setIsWorking] = useState<boolean>(false);
 
   return (
     <div>
@@ -25,14 +28,24 @@ function IntroCard() {
               <div className='kor-title'>이력서</div>
               <div className='kor-ver'>(Kor)</div>
             </div>
-            <div className='eng' >
+            <div className='eng' onClick={() => setIsWorking(!isWorking)} >
               <div className='eng-title'>English</div>
               <div className='eng-title'>Resume</div>
               <div className='eng-ver'>(Eng)</div>
             </div>
           </Styled.back>
-
         </Styled.wrapper>
+
+        {/* will be removed when finished */}
+        {isWorking && 
+          <Styled.notice>
+            <div className='notice-wrapper'>
+            <RiDeleteBack2Line className='notice-delete' onClick={() => setIsWorking(!isWorking)}/>
+              <ImWarning className="delete-warning-icon"/>
+              <div className='notice'>Sorry, this page is currently not available.</div>
+              <div className='notice'>It will be finished as soon as possible.</div>
+            </div>
+          </Styled.notice>}
       </Styled.intro>
     </div>
   )
@@ -76,7 +89,7 @@ const Styled = {
     }
 
     @media (max-width: 650px) {
-      width: 55vw;
+      width: 65vw;
       height: 80vh;
     }
   `,
@@ -134,13 +147,45 @@ const Styled = {
         font-weight: 900;
         transition: font-weight .35s ease-in-out;
       }
+      @media (max-width: 650px) {
+        width: 40vw;
+        height: 10vh;
+      }
     }
 
     .kor-title, .eng-title {
-      
       font-family: 'Nanumsquare', sans-serif;
       font-size: 5vmin;
     }
+  `,
 
+  notice: styled.div`
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    white-space: nowrap;
+
+    .notice-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      width: 40vw;
+      height: 50vh;
+      background-color: ivory;
+      font-family: Jua, serif;
+      font-size: larger;
+    }
   `,
 }
