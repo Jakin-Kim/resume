@@ -83,6 +83,7 @@ const Styled = {
     // card flip
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    will-change: transition;
 
     :hover{
       cursor: pointer;
@@ -90,6 +91,7 @@ const Styled = {
       // card flip
       transform: rotateY(180deg);
       box-shadow: 0px 0px 3px #AFAFAF;
+      will-change: transform;
     }
 
     @media (max-width: 650px) {
@@ -132,6 +134,7 @@ const Styled = {
     transform: rotateY(180deg);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    will-change: transform;
 
     .kor, .eng {
       
