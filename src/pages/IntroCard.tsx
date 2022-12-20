@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function IntroCard() {
-  const isFlipped = useState<boolean>(false);
+  const navigate = useNavigate();
 
   return (
     <div>
       <Styled.intro>
         <Styled.wrapper className='wrapper'>
 
-          {/* frontside */}
+          {/* front-side of the card */}
           <Styled.front>
             <div className='title'>Jakin Kim</div>
             <div className='title'>Resume</div>
@@ -17,18 +18,17 @@ function IntroCard() {
             <div className='content'>Front-End Developer &#x1F60A;</div>
           </Styled.front>
 
-          {/* backside */}
-          {/* <Styled.back>
-
-          </Styled.back> */}
+          {/* back-side of the card */}
           <Styled.back>
-            <div className='kor'>
-              <div className='kor_title'>한국어</div>
-              <div className='kor_title'>이력서</div>
+            <div className='kor' onClick={() => navigate('/jakin-resume')}>
+              <div className='kor-title'>한국어</div>
+              <div className='kor-title'>이력서</div>
+              <div className='kor-ver'>(Kor)</div>
             </div>
-            <div className='eng'>
-              <div className='eng_title'>English</div>
-              <div className='eng_title'>Resume</div>
+            <div className='eng' >
+              <div className='eng-title'>English</div>
+              <div className='eng-title'>Resume</div>
+              <div className='eng-ver'>(Eng)</div>
             </div>
           </Styled.back>
 
@@ -109,19 +109,33 @@ const Styled = {
     position: absolute;
     display:flex;
     flex-direction: column;
-    
     align-items: center;
-    background-color: #F3D6D7;
 
     // card flip
     transform: rotateY(180deg);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
-    border-radius: 20px;
     .kor, .eng {
-      padding-bottom: 10px;
-      font-weight: 900;
+      
+      margin: 35px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #F3D6D7;
+      width: 20vw;
+      height: 30vh;
+      :hover {
+        position: absolute;
+        box-shadow: 3px 3px 3px #AFAFAF;
+        font-weight: 900;
+        transition: font-weight .5s ease-in-out;
+      }
+    }
+
+    .kor-title, .eng-title {
       font-family: 'Nanumsquare', sans-serif;
       font-size: 5vmin;
     }
