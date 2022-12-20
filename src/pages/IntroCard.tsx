@@ -40,10 +40,14 @@ function IntroCard() {
         {isWorking && 
           <Styled.notice>
             <div className='notice-wrapper'>
-            <RiDeleteBack2Line className='notice-delete' onClick={() => setIsWorking(!isWorking)}/>
-              <ImWarning className="delete-warning-icon"/>
-              <div className='notice'>Sorry, this page is currently not available.</div>
-              <div className='notice'>It will be finished as soon as possible.</div>
+              <div className='notice-delete'>
+                <RiDeleteBack2Line className='delete' onClick={() => setIsWorking(!isWorking)}/>
+              </div>
+              <div className='notice-content'>  
+                <ImWarning className="notice warning-icon"/>
+                <div className='notice'>Sorry, this page is currently not available.</div>
+                <div className='notice'>It will be finished as soon as possible.</div>
+              </div>
             </div>
           </Styled.notice>}
       </Styled.intro>
@@ -174,18 +178,45 @@ const Styled = {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
     white-space: nowrap;
-
+    
+    
     .notice-wrapper {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
       border-radius: 20px;
-      width: 40vw;
-      height: 50vh;
+      width: 50vw;
+      height: 40vh;
       background-color: ivory;
       font-family: Jua, serif;
-      font-size: larger;
+      font-size: 2.5vmin;
+
+      .notice-delete {
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: 2.5vmin;
+        margin-right: 75px;
+        font-size: 4vmin;
+        :hover {
+          cursor: pointer;
+        }
+      }
+
+      .notice-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .notice {
+          padding: 2.5vmin 0;
+        }
+
+        .warning-icon {
+          font-size: 5vmin;
+          color: orange;
+        }
+      }
     }
+
   `,
 }
