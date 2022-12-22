@@ -19,9 +19,11 @@ export default Icons;
 const Styled = {
     wrapper: styled.div`
         font-size: 3.5vmin;
-        margin: 3.5vmin 1.5vmin;
         :hover {
-          cursor: pointer;
+            cursor: pointer;
+        }
+        .icons {
+            margin: 3.5vmin 1.5vmin;
         }
     `
 }

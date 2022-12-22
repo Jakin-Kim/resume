@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Icons from "../components/Icons";
+import Icons from "../Icons";
 
 function Profile() {
   return (

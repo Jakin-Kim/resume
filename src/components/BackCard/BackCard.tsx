@@ -1,11 +1,5 @@
-import React from 'react'
 import styled from 'styled-components';
-
-interface BackCardType {
-    isWorking: boolean,
-    setIsWorking: (isWorking: boolean) => void,
-    navigate: (path: string) => void
-}
+import { BackCardType } from '../../types/meta';
 
 function BackCard({ isWorking, setIsWorking, navigate }: BackCardType ) {
   return (
