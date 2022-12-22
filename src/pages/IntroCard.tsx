@@ -3,40 +3,22 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ImWarning } from 'react-icons/im';
 import { RiDeleteBack2Line } from 'react-icons/ri';
+import FrontCard from '../components/FrontCard/FrontCard';
+import BackCard from '../components/BackCard/BackCard';
 
 function IntroCard() {
   const navigate = useNavigate();
   const [isWorking, setIsWorking] = useState<boolean>(false);
 
   return (
-    <div>
+    <>
       <Styled.intro>
         <Styled.wrapper className='wrapper'>
-
-          {/* front-side of the card */}
-          <Styled.front>
-            <div className='title'>Jakin Kim</div>
-            <div className='title'>Resume</div>
-            <div className='content'>Hi, I'm Jakin,</div>
-            <div className='content'>Front-End Developer &#x1F60A;</div>
-          </Styled.front>
-
-          {/* back-side of the card */}
-          <Styled.back>
-            <div className='kor' onClick={() => navigate('/jakin-resume')}>
-              <div className='kor-title'>한국어</div>
-              <div className='kor-title'>이력서</div>
-              <div className='kor-ver'>(Kor)</div>
-            </div>
-            <div className='eng' onClick={() => setIsWorking(!isWorking)} >
-              <div className='eng-title'>English</div>
-              <div className='eng-title'>Resume</div>
-              <div className='eng-ver'>(Eng)</div>
-            </div>
-          </Styled.back>
+          <FrontCard/>
+          <BackCard isWorking={isWorking} setIsWorking={setIsWorking} navigate={navigate}/>
         </Styled.wrapper>
 
-        {/* will be removed when finished */}
+        {/* will be removed when finished eng ver page*/}
         {isWorking && 
           <Styled.notice>
             <div className='notice-wrapper'>
@@ -51,7 +33,7 @@ function IntroCard() {
             </div>
           </Styled.notice>}
       </Styled.intro>
-    </div>
+    </>
   )
 }
 
@@ -100,71 +82,7 @@ const Styled = {
     }
   `,
 
-  front: styled.div`
-    position: absolute;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-
-    // card flip
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-
-    .title {
-      padding-bottom: 10px;
-      font-weight: 900;
-      font-family: 'Nanumsquare', sans-serif;
-      font-size: 5vmin;
-    }
-
-    .content{
-      font-family: 'Nanumsquare', sans-serif;
-      font-size: 2vmin;
-      padding-bottom: 5px;
-    }
-  `,
-
-  back: styled.div`
-    position: absolute;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-
-    // card flip
-    transform: rotateY(180deg);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: transform;
-
-    .kor, .eng {
-      
-      margin: 35px;
-      border-radius: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #F3D6D7;
-      width: 20vw;
-      height: 30vh;
-      font-weight: 100;
-      :hover {
-        will-change: font-weight;
-        box-shadow: 3px 3px 3px #AFAFAF;
-        font-weight: 900;
-        transition: font-weight .35s ease-in-out;
-      }
-      @media (max-width: 650px) {
-        width: 40vw;
-        height: 10vh;
-      }
-    }
-
-    .kor-title, .eng-title {
-      font-family: 'Nanumsquare', sans-serif;
-      font-size: 5vmin;
-    }
-  `,
+  
 
   notice: styled.div`
     position: fixed;
