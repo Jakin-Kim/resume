@@ -5,13 +5,13 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 import Header from "../components/Header/Header";
 import NavBar from "../components/NavBar/NavBar";
 import Contents from "../components/Contents/Contents";
-import { IntroType } from "../types/meta";
+import { Data } from "../types/meta";
 
 
 function Resume() {  
 
-  const { intro }: IntroType = data;
-
+  const { intro }: Data = data;
+  
   return (
     <>
       <Styled.container>
@@ -42,13 +42,5 @@ const Styled = {
         color: gray;
       }
     }
-  `,
-
-  nav: styled.nav`
-
-  `,
-
-  content: styled.div`
-    
-  `,
+  `
 };

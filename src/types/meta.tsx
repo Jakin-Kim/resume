@@ -1,4 +1,4 @@
-export type IntroType = {
+export type Data = {
     intro: {
       title: string,
       content: string[],
