@@ -7,5 +7,111 @@
             "급하게 몰아서 공부하는 것보다 가랑비에 옷을 적시듯이 꾸준히 공부하길 좋아합니다.",
             "새로 배운 내용들을 꼼꼼하게 기록하는 습관이 있습니다."
         ]
+    },
+    "contents": {
+        "skills": {
+            "communication": [
+                "적극적으로 의견을 나누는 문화가 건강하다고 믿습니다.",
+                "언제나 제가 배울 점이 있다는 자세로 듣습니다.",
+                "커뮤니케이션은 업무의 핵심이라고 생각합니다."
+            ],
+            "javascript": [
+                "ES5/ES6 문법에 모두 익숙하고 함수형 프로그래밍을 지향합니다.",
+                "클래스를 이용한 객체지향 프로그래밍(OOP)에도 능숙합니다.",
+                "순수 JS로 DOM을 잘 다루지만 라이브러리나 프레임워크를 적극 활용합니다."
+            ],
+            "typescript": [
+                "Webpack을 통한 필요한 환경변수 설정이 가능합니다.",
+                "TS의 강력한 타입시스템으로 React의 상태나 변수, 함수 등을 컴파일 타임에 체크하여 효율적이고 생산적인 코드를 작성하는 것을 좋아합니다."
+            ],
+            "react": [
+                "필요한 UI/UX 구현 및 Hooks를 통해 상태값 생성/관리 할 수 있습니다.",
+                "styled-component를 통해 컴포넌트를 스타일링 하는데 익숙합니다.",
+                "Redux를 통한 효율적인 상태관리를 추구합니다."
+            ],
+            "nodejs": [
+                "Express를 통해 간단한 웹 서버를 구축할 수 있습니다."
+            ],
+            "aws": [
+                "S3를 통한 정적 배포와 Github Action을 활용하여 CI/CD를 구현할 수 있습니다.",
+                "EC2 instance를 설정하고 서버를 실행해본 경험이 있습니다."
+            ]
+        },
+        "projects": [
+            {
+                "title": "나만의 이력서",
+                "period": "(2022.12. ~ 2022.12. | 2주 개발)",
+                "description": "나만의 이력서 페이지입니다.",
+                "whatidid": [
+                    "Figma를 통한 프로토타입 설계",
+                    "전체 페이지 디자인을 비롯하여 스크롤스파이, 다크모드 등 라이브러리를 사용하지 않고 직접 구현",
+                    "추후 효율적인 리팩토링을 위해 필요한 모든 데이터 정리"
+                ],
+                "stack": [
+                    "TypeScript", "React", "Redux", "styled-components", "Figma"
+                ]
+            },
+            {
+                "title": "쓰위치(Sswitch): 쓰레기통의 위치가 궁금해?, 쓰위치",
+                "period": "(2022.09. ~ 2022.10. | 1개월 개발)",
+                "description": "쓰레기통 정보를 제공해주는 위치 기반 서비스입니다.",
+                "whatidid": [
+                    "팀장으로서 매일 아침 회의진행",
+                    "프로젝트 기획 및 진행상황 일정관리",
+                    "공공데이터 API와 Kakao Map API를 이용한 데이터 위치 구현 및 커스터마이징",
+                    "모바일 환경을 고려한 전체 페이지 반응형 웹 구현",
+                    "Figma를 활용한 유저 플로우 및 와이어프레임 설계"
+                ],
+                "stack": [
+                    "React", "JavaScript", "Redux", "styled-components", "Kakao Map API", "Figma"
+                ]
+            },
+            {
+                "title": "Stack Overflow 클론",
+                "period": "(2022.08. ~ 2022.09. | 2주 개발)",
+                "description": "대표적인 개발자 질문 웹사이트인 ‘Stack Overflow’ 클론코딩입니다.",
+                "whatidid": [
+                    "팀장으로서 매일 아침 회의진행",
+                    "프로젝트 기획 및 진행상황 일정관리(Github Issue & Milestone)",
+                    "메인페이지 애니메이션 및 게시글 기능 구현",
+                    "AWS S3 정적배포"
+                ],
+                "stack": [
+                    "React", "JavaScript", "Redux", "styled-components", "Figma"
+                ]
+            }            
+        ],
+        "career": [
+            {
+                "title": "해커스교육그룹: (주)챔프스터디",
+                "period": "(2020.11. ~ 2022.03. | 1년 5개월)",
+                "position": "온라인학사마케팅팀 / 프로(사원)",
+                "whatidid": [
+                    "유저 동향(성별, 나이, 방문경로 및 실결제 여부 등) 데이터 분석에 근거한 프로모션 기획 아이디어 제안",
+                    "온라인 강의자료 및 영상 업로드",
+                    "실시간 온라인 유저 응대 및 상담"
+                ],
+                "stack": [
+                    "CRM", "Google Analytics(GA) 기반 사내 자체프로그램"
+                ]
+            },
+            {
+                "title": "J.Cat Beauty Enterprise, LLC",
+                "period": "(2019.09. ~ 2020.09. | 1년)",
+                "position": "Marketing / Intern",
+                "whatidid": [
+                    "아이디어 회의 및 SNS를 통한 화장품 신상홍보",
+                    "온라인 및 오프라인 고객관리 및 응대",
+                    "주문내역(Purchase Order)처리 및 결제내역(Invoice)처리"
+                ],
+                "stack": [
+                    "Facebook", "Instagram", "YouTube", "Tiktok", "Shopify"
+                ]
+            }
+        ],
+        "activities": [
+            
+        ]
     }
 }
+    
