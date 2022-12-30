@@ -5,12 +5,12 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 import Header from "../components/Header/Header";
 import NavBar from "../components/NavBar/NavBar";
 import Contents from "../components/Contents/Contents";
-import { Data } from "../types/meta";
+import { IntroType } from "../types/meta";
 
 
 function Resume() {  
 
-  const { intro }: Data = data;
+  const { intro }: IntroType = data;
   
   return (
     <>

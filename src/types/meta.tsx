@@ -1,8 +1,29 @@
-export type Data = {
+export type IntroType = {
     intro: {
       title: string,
       content: string[],
-    }  
+    }
+}
+
+export type ContentsType = {
+  contents: {
+    skills: {
+      communication: string[],
+      javascript: string[],
+      typescript: string[],
+      react: string[],
+      nodejs: string[],
+      aws: string[],
+    },
+  }
+}
+
+export type ProjectsType = {
+  title: string,
+  period: string,
+  description: string,
+  whatidid: string[],
+  stack: string[],
 }
 
 export type BackCardType = {

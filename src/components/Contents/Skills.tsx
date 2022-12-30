@@ -1,9 +1,17 @@
-import React from 'react'
+import styled from "styled-components"
 
 function Skills() {
   return (
-    <div>Skills</div>
+    <Styled.skills>
+
+    </Styled.skills>
   )
 }
 
-export default Skills
+export default Skills;
+
+const Styled = {
+  skills: styled.div`
+    
+  `
+}

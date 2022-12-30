@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Data } from '../../types/meta';
+import { IntroType } from '../../types/meta';
 
-function Intro({ intro }: Data) {
+function Intro({ intro }: IntroType) {
   return (
     <Styled.intro>
         <h1>{intro.title}</h1>

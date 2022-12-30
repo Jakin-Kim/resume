@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Profile from "./Profile";
 import Intro from "./Intro";
-import { Data } from '../../types/meta';
+import { IntroType } from '../../types/meta';
 
-function Header({ intro }: Data) {
+function Header({ intro }: IntroType) {
   return (
     <Styled.header>
         <Profile/>
