@@ -1,14 +1,13 @@
 import styled from 'styled-components';
+import data from '../../data/data.json'
 
 function NavBar() {
+  const { nav } = data;
+
   return (
     <Styled.wrapper>
-      <div className='nav-btn skills'>스킬</div>
-      <div className='nav-btn projects'>프로젝트</div>
-      <div className='nav-btn career'>경력</div>
-      <div className='nav-btn activity'>활동</div>
-      <div className='nav-btn education'>교육</div>
-      <div className='nav-btn etc'>기타</div>
+      {nav.map(ele => 
+        <div key={ele} className='nav-btn'>{ele}</div>)}
     </Styled.wrapper>
   )
 }
@@ -22,8 +21,8 @@ const Styled = {
     align-items: center;
 
     .nav-btn {
-      border-left: 1px solid black;
-      border-right: 1px solid black;
+      border-left: .5px solid black;
+      border-right: .5px solid black;
       padding: 0 2vmin;
       font-size: 3vmin;
       font-weight: 800;
@@ -33,8 +32,5 @@ const Styled = {
         color: gray;
       }
     }
-
-    .skills { border-left: 2px solid black; }
-    .etc { border-right: 2px solid black; }
   `,
 };
