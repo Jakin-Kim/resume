@@ -24,7 +24,7 @@ const Styled = {
       border-left: .5px solid black;
       border-right: .5px solid black;
       padding: 0 2vmin;
-      font-size: 3vmin;
+      font-size: 4vmin;
       font-weight: 800;
       font-family: 'Nanumsquare', sans-serif;
       :hover {

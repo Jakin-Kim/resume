@@ -42,7 +42,7 @@ const Styled = {
     .title {
       border-bottom: 1px solid black;
       padding: 1vmin;
-      font-size: 3vmin;
+      font-size: 4vmin;
       font-weight: 800;
       font-family: 'Nanumsquare', sans-serif;
     }
