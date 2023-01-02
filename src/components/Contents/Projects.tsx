@@ -47,7 +47,8 @@ const Styled = {
   contents: styled.div`
     font-family: 'Nanumsquare', sans-serif; 
     .project_title {
-      padding: 1.5vmin;
+      margin-top: 8vmin;
+      padding: 0 1.5vmin;
       font-size: 3vmin;
       font-weight: 800;
     }
