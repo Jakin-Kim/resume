@@ -88,6 +88,7 @@
         ],
         "career": [
             {
+                "id": 1,
                 "title": "해커스교육그룹: (주)챔프스터디",
                 "period": "(2020.11. ~ 2022.03. | 1년 5개월)",
                 "position": "온라인학사마케팅팀 / 프로(사원)",
@@ -101,6 +102,7 @@
                 ]
             },
             {
+                "id": 2,
                 "title": "J.Cat Beauty Enterprise, LLC",
                 "period": "(2019.09. ~ 2020.09. | 1년)",
                 "position": "Marketing / Intern",
@@ -116,6 +118,7 @@
         ],
         "activities": [
             {
+                "id": 1,
                 "title": "TypeScript로 블록체인 만들기",
                 "period": "(2022.11. ~ 2022.11 | 2주)",
                 "description": "TS 기초문법 학습 및 블록체인(mini-project) 만들기",
@@ -125,6 +128,7 @@
                 ]
             },
             {
+                "id": 2,
                 "title": "‘쓰위치(Sswitch)’ 프로젝트 리팩토링",
                 "period": "(2022.10. ~ 2022.11.)",
                 "description": "매주 월요일, 목요일 오전에 팀원들과 모여서 메인 프로젝트 리팩토링",
@@ -134,6 +138,7 @@
                 ]
             },
             {
+                "id": 3,
                 "title": "1일 1알고리즘",
                 "period": "(2022.06. ~ 현재)",
                 "description": "HackerRank나 Daily Coding 문제, Udemy 강의를 수강하여 문제풀이",
@@ -145,6 +150,7 @@
         ],
         "education": [
             {
+                "id": 1,
                 "title": "코드스테이츠(Code States)",
                 "period": "(2022.04 - 2022.10 | 6개월)",
                 "description": "프론트엔드 개발자 부트캠프 (24주 과정)",
@@ -157,6 +163,7 @@
                 ]
             },
             {
+                "id": 2,
                 "title": "연세대학교(원주)",
                 "period": "(2014.03 - 2019.08 | 3년 6개월)",
                 "description": "영어영문학과",
@@ -170,10 +177,12 @@
         ],
         "etc": [
             {
+                "id": 1,
                 "title": "중등교원자격증 2급(영어)",
                 "period": "(2019.08)"
             },
             {
+                "id": 2,
                 "title": "TOEIC",
                 "period": "(2021.10.10)",
                 "description": "895"

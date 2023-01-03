@@ -25,8 +25,7 @@ function Projects() {
             <div>{'<Tech Stack>'}</div>
             {project.stack.map(ele => <span key={ele} className='stack'>| {ele} |</span>)}
           </div>
-        </Styled.contents>
-        )}
+        </Styled.contents>)}
     </Styled.projects>
   )
 }
