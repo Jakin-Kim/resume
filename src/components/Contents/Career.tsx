@@ -6,20 +6,20 @@ function Career() {
 
   return (
     <Styled.career>
-      <div className="title">경력</div>
+      <div className="main_title">경력</div>
       {career.map(ele => 
         <Styled.contents key={ele.id}>
-          <div className='project_title'>{ele.title}</div>
-          <div className='project_period'>{ele.period}</div>
-          <div className='project_description'>
+          <div className='title'>{ele.title}</div>
+          <div className='period'>{ele.period}</div>
+          <div className='description'>
             <div>{'<Position>'}</div>
             <li>{ele.position}</li>
           </div>
-          <div className='project_whatidid'>
+          <div className='whatidid'>
             <div>{'<What I did>'}</div>
             {ele.whatidid.map(ele => <li key={ele}>{ele}</li>)}
           </div>
-          <div className='project_stack'>
+          <div className='stack'>
             <div>{'<Tech Stack>'}</div>
             {ele.stack.map(ele => <span key={ele} className='stack'>| {ele} |</span>)}
           </div>
@@ -33,7 +33,7 @@ export default Career;
 const Styled = {
   career: styled.div`
     margin: 8vmin;
-    .title {
+    .main_title {
       border-bottom: 1px solid black;
       padding: 1vmin;
       font-size: 4vmin;
@@ -43,20 +43,20 @@ const Styled = {
   `,
   contents: styled.div`
     font-family: 'Nanumsquare', sans-serif; 
-    .project_title {
+    .title {
       margin-top: 8vmin;
       padding: 0 1.5vmin;
       font-size: 3vmin;
       font-weight: 800;
     }
 
-    .project_period {
+    .period {
       color: gray;
       font-size: 2vmin;
       padding: .5vmin 2vmin;
     }
 
-    .project_description, .project_whatidid, .project_stack {
+    .description, .whatidid, .stack {
       font-size: 2vmin;
       padding: 1.5vmin;
       > div {
