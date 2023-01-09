@@ -5,7 +5,7 @@ function Career() {
   const { career } = data.contents;
 
   return (
-    <Styled.career>
+    <Styled.career id="career">
       <div className="main_title">경력</div>
       {career.map(ele => 
         <Styled.contents key={ele.id}>

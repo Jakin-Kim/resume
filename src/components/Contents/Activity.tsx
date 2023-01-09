@@ -6,7 +6,7 @@ function Activity() {
   const { activities } = data.contents;
 
   return (
-    <Styled.activity>
+    <Styled.activity id="activity">
       <div className="main_title">활동</div>
       {activities.map(ele => 
         <Styled.contents key={ele.id}>

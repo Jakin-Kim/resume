@@ -7,7 +7,7 @@ function Projects() {
   const { projects } = data.contents;
   
   return (
-    <Styled.projects>
+    <Styled.projects id='project'>
       <div className='main_title'>프로젝트</div>
       {projects.map(project => 
         <Styled.contents key={project.id}>

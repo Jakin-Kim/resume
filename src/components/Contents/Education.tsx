@@ -6,8 +6,8 @@ function Education() {
   const { education } = data.contents;
 
   return (
-    <Styled.education>
-      <div className="main_title">활동</div>
+    <Styled.education id="education">
+      <div className="main_title">교육</div>
       {education.map(edu => 
         <Styled.contents key={edu.id}>
           <div className='title'>{edu.title}</div>

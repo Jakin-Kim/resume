@@ -7,7 +7,7 @@ function Skills() {
   const { skills } = data.contents;
 
   return (
-    <Styled.skills>
+    <Styled.skills id="skill">
       <div className="title">스킬</div>
 
       <div className="communication">

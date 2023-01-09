@@ -6,7 +6,7 @@ function Etc() {
   const { etc } = data.contents;
   
   return (
-    <Styled.etc>
+    <Styled.etc id="etc">
       <div className="main_title">기타</div>
       {etc.map(item => 
         <Styled.contents key={item.id}>
