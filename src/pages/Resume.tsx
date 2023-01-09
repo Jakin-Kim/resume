@@ -4,7 +4,7 @@ import data from "../data/data.json";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import Header from "../components/Header/Header";
 import NavBar from "../components/NavBar/NavBar";
-import Contents from "../components/Contents/Contents";
+import Contents from "../components/Contents";
 import { IntroType } from "../types/meta";
 
 
