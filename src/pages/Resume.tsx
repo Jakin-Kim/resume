@@ -12,6 +12,7 @@ function Resume() {
 
   const { intro }: IntroType = data;
   
+
   return (
     <>
       <Styled.container>

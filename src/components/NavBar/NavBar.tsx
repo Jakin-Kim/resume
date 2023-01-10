@@ -1,17 +1,34 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import data from '../../data/data.json';
-import { useState, useEffect, useRef } from 'react';
-// import { useScrollBy } from 'react-use-window-scroll';
+import { useEffect, useState } from 'react';
 
 function NavBar() {
   const { nav } = data;
+  const [scrollY, setScrollY] = useState(0);
+  const [scrollActive, setScrollActive] = useState<boolean>(false);
 
   const goToScroll = (name: string) => {
     const clicked = (document.querySelector("#" + name) as HTMLElement).offsetTop;
-    window.scrollTo({ top: clicked, behavior: 'smooth' });
+    window.scrollTo({ top: clicked - 50, behavior: 'smooth' });
   };
+
+  const scrollFixed = () => {
+    if(scrollY > 380) {
+      setScrollY(window.pageYOffset);
+      setScrollActive(true);
+    } else {
+      setScrollY(window.pageYOffset);
+      setScrollActive(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollFixed);
+    return () => window.removeEventListener('scroll', scrollFixed);
+  });
+
   return (
-    <Styled.wrapper >
+    <Styled.wrapper id="nav" isActive={scrollActive}>
         <div className='nav-btn skills' onClick={() => goToScroll('skill')}>스킬</div>
         <div className='nav-btn' onClick={() => goToScroll('project')}>프로젝트</div>
         <div className='nav-btn' onClick={() => goToScroll('career')}>경력</div>
@@ -25,12 +42,10 @@ function NavBar() {
 export default NavBar;
 
 const Styled = {
-  wrapper: styled.div`
+  wrapper: styled.div<{isActive: boolean}>` // styled-components에서 type 지정하는 방법
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
 
     .nav-btn {
       border-left: .5px solid black;
@@ -44,5 +59,15 @@ const Styled = {
         color: gray;
       }
     }
-  `,
+
+     ${(props) => props.isActive 
+        && css`
+          width: 100vw;
+          height: 5vh;
+          background-color: #ffffff;
+          position: fixed;
+          top: 0;
+          border-bottom: 1px solid gray;
+        `}
+    `,
 };
