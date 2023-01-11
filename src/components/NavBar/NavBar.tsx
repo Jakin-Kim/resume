@@ -42,7 +42,7 @@ function NavBar() {
 export default NavBar;
 
 const Styled = {
-  wrapper: styled.div<{isActive: boolean}>` // styled-components에서 type 지정하는 방법
+  wrapper: styled.div<{isActive: boolean}>`
     display: flex;
     justify-content: center;
     align-items: center;
