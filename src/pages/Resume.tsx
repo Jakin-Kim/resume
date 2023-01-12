@@ -5,6 +5,7 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 import Header from "../components/Header/Header";
 import NavBar from "../components/NavBar/NavBar";
 import Contents from "../components/Contents";
+import ScrollIndicator from "../components/ScrollIndicator/ScrollIndicator";
 import { IntroType } from "../types/meta";
 
 
@@ -16,6 +17,7 @@ function Resume() {
   return (
     <>
       <Styled.container>
+        <ScrollIndicator/>
         <div className="dark-mode">
           <MdDarkMode/>
         </div>

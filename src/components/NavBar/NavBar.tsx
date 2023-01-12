@@ -9,11 +9,11 @@ function NavBar() {
 
   const goToScroll = (name: string) => {
     const clicked = (document.querySelector("#" + name) as HTMLElement).offsetTop;
-    window.scrollTo({ top: clicked - 50, behavior: 'smooth' });
+    window.scrollTo({ top: clicked - 145, behavior: 'smooth' });
   };
 
   const scrollFixed = () => {
-    if(scrollY > 380) {
+    if(scrollY > 535) {
       setScrollY(window.pageYOffset);
       setScrollActive(true);
     } else {
@@ -46,6 +46,7 @@ const Styled = {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 8vh;
 
     .nav-btn {
       border-left: .5px solid black;
@@ -63,11 +64,11 @@ const Styled = {
      ${(props) => props.isActive 
         && css`
           width: 100vw;
-          height: 5vh;
+          height: 8vh;
           background-color: #ffffff;
           position: fixed;
           top: 0;
-          border-bottom: 1px solid gray;
+          border-bottom: .5px solid lightgray;
         `}
     `,
 };
