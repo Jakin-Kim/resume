@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 function ScrollIndicator() {
 
-  const [scroll, setScroll] = useState(0);
+  const [scroll, setScroll] = useState<number>(0);
 
   const onScroll = () => {
     const Scrolled = document.documentElement.scrollTop;

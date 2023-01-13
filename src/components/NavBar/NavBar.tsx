@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 function NavBar() {
   const { nav } = data;
-  const [scrollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState<number>(0);
   const [scrollActive, setScrollActive] = useState<boolean>(false);
 
   const goToScroll = (name: string) => {
