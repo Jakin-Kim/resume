@@ -27,7 +27,7 @@ export default ScrollIndicator;
 
 const Styled = {
   container: styled.div`
-    background-color: lightgray;
+    background-color: black;
     height: 5px;
     position: fixed;
     z-index: 1;
@@ -37,7 +37,7 @@ const Styled = {
 
     #progress-bar {
       height: 5px;
-      background-color: skyblue;
+      background-color: yellow;
     }
   `,
 }

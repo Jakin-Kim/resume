@@ -64,11 +64,12 @@ const Styled = {
      ${(props) => props.isActive 
         && css`
           width: 100vw;
-          height: 8vh;
+          height: 6vh;
           background-color: #ffffff;
           position: fixed;
           top: 0;
           border-bottom: .5px solid lightgray;
+          .nav-btn { font-size: 2.5vmin; }
         `}
     `,
 };
