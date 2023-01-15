@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { SiGithub, SiGmail, SiNotion } from "react-icons/si";
 import { ImMobile } from "react-icons/im";
 
-function Icons() {
+function ContactIcons() {
   return (
     <Styled.wrapper>
         <SiGithub className="icons" onClick={() => window.open('https://github.com/Jakin-Kim')}/>
@@ -14,7 +14,7 @@ function Icons() {
   )
 }
 
-export default Icons;
+export default ContactIcons;
 
 const Styled = {
     wrapper: styled.div`

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import data from '../../data/data.json';
 import { useEffect, useState } from 'react';
+import { DarkModeType } from '../../types/meta';
 
 function NavBar() {
   const { nav } = data;
@@ -9,7 +10,7 @@ function NavBar() {
 
   const goToScroll = (name: string) => {
     const clicked = (document.querySelector("#" + name) as HTMLElement).offsetTop;
-    window.scrollTo({ top: clicked - 145, behavior: 'smooth' });
+    window.scrollTo({ top: clicked - 135, behavior: 'smooth' });
   };
 
   const scrollFixed = () => {

@@ -31,3 +31,7 @@ export type BackCardType = {
     setIsWorking: (isWorking: boolean) => void,
     navigate: (path: string) => void
 }
+
+export type DarkModeType = {
+  className: string
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Icons from '../Icons/Icons';
+import ContactIcons from '../Icons/Icons';
 
 function Profile() {
   return (
     <Styled.profile>
         <img src="./images/profile.png" alt="profile"/>
-        <Icons/>
+        <ContactIcons/>
     </Styled.profile>
   )
 }

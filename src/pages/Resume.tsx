@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { useState } from "react";
 import data from "../data/data.json";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
@@ -12,14 +12,15 @@ import { IntroType } from "../types/meta";
 function Resume() {  
 
   const { intro }: IntroType = data;
-  
+  const [isDark, setIsDark] = useState<boolean>(false);
+  const changeMode = () => setIsDark(!isDark);
 
   return (
     <>
-      <Styled.container>
+      <Styled.container className={`${isDark && "dark-mode"}`}>
         <ScrollIndicator/>
-        <div className="dark-mode">
-          <MdDarkMode/>
+        <div className="dark-mode-wrapper">
+          {isDark ? <MdLightMode onClick={changeMode}/> : <MdDarkMode onClick={changeMode}/>}
         </div>
 
         <Header intro={intro}/>
@@ -35,7 +36,7 @@ export default Resume;
 
 const Styled = {
   container: styled.div`
-    .dark-mode {
+    .dark-mode-wrapper {
       display: flex;
       flex-direction: row-reverse;
       font-size: 3vmin;
