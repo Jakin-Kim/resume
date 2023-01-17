@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import FrontCard from '../components/FrontCard/FrontCard';
-import BackCard from '../components/BackCard/BackCard';
-import Notice from '../components/Notice/Notice';
+import FrontCard from '../components/FrontCard';
+import BackCard from '../components/BackCard';
+import Notice from '../components/Notice';
 
 function IntroCard() {
   const navigate = useNavigate();

@@ -2,10 +2,10 @@ import styled, { css } from "styled-components";
 import { useState } from "react";
 import data from "../data/data.json";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import Header from "../components/Header/Header";
-import NavBar from "../components/NavBar/NavBar";
+import Header from "../components/Header";
+import NavBar from "../components/NavBar";
 import Contents from "../components/Contents";
-import ScrollIndicator from "../components/ScrollIndicator/ScrollIndicator";
+import ScrollIndicator from "../components/ScrollIndicator";
 import { IntroType } from "../types/meta";
 
 
