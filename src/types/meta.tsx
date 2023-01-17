@@ -33,5 +33,10 @@ export type BackCardType = {
 }
 
 export type DarkModeType = {
-  className: string
+  isDark: boolean,
+}
+
+export type NavBarProps = {
+  isDark: boolean,
+  isActive: boolean,
 }

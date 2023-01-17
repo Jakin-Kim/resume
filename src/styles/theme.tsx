@@ -1,15 +1,10 @@
 import styled from "styled-components";
 
 const mode = {
-    darkMode:`
+    dark:`
         background-color: black;
-        color: white,
+        color: white;
     `,
-
-    lightMode:`
-        background-color: white;
-        color: black;    
-    `
 };
 
 const theme = {
