@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import data from "../data/data.json";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import Header from "../components/Header";
@@ -14,6 +14,7 @@ function Resume() {
   const { intro }: IntroType = data;
   const [isDark, setIsDark] = useState<boolean>(false);
   const changeMode = () => setIsDark(!isDark);
+
   return (
     <>
       <Styled.container isDark={isDark}>
@@ -33,6 +34,7 @@ export default Resume;
 
 const Styled = {
   container: styled.div<{isDark: boolean}>`
+    margin-bottom: 100px;
     ${(props) => props.isDark 
       && css`
         background-color: black;
