@@ -20,7 +20,13 @@ function Resume() {
       <Styled.container isDark={isDark}>
         <ScrollIndicator/>
         <div className="dark-mode-wrapper">
-          {isDark ? <MdLightMode onClick={changeMode}/> : <MdDarkMode onClick={changeMode}/>}
+          {isDark ? 
+            <MdLightMode 
+              className="light" 
+              onClick={changeMode}/> : 
+            <MdDarkMode 
+              className="dark" 
+              onClick={changeMode}/>}
         </div>
         <Header intro={intro}/>
         <NavBar isDark={isDark}/>
@@ -46,9 +52,11 @@ const Styled = {
       flex-direction: row-reverse;
       font-size: 3vmin;
       padding: 2.5vmin;
-      :hover{ 
-        cursor: pointer; 
-        color: gray;
+      .light, .dark {
+        :hover{ 
+          cursor: pointer; 
+          color: gray;
+        }
       }
     }
   `
