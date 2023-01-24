@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import data from "../../data/data.json";
+import { IntersectionObserverType } from "../../types/meta";
 
-function Education() {
+function Education({className, animationRef}: IntersectionObserverType) {
 
   const { education } = data.contents;
 
   return (
-    <Styled.education id="education">
+    <Styled.education id="education" ref={animationRef}>
       <div className="main_title">교육</div>
       {education.map(edu => 
         <Styled.contents key={edu.id}>
