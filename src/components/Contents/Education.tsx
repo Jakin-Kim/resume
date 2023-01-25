@@ -1,13 +1,15 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import data from "../../data/data.json";
 import { IntersectionObserverType } from "../../types/meta";
 
-function Education({className, animationRef}: IntersectionObserverType) {
+function Education(
+    {eleIsVisible, className, animationRef}: IntersectionObserverType
+  ) {
 
   const { education } = data.contents;
 
   return (
-    <Styled.education id="education" ref={animationRef}>
+    <Styled.education id="education" ref={animationRef} eleIsVisible={eleIsVisible}>
       <div className="main_title">교육</div>
       {education.map(edu => 
         <Styled.contents key={edu.id}>
@@ -25,8 +27,19 @@ function Education({className, animationRef}: IntersectionObserverType) {
 export default Education
 
 const Styled = {
-  education: styled.div`
+  education: styled.div<{eleIsVisible: boolean}>`
     margin: 8vmin;
+    ${props => props.eleIsVisible ? 
+        css`
+          transform: translateX(0);
+          opacity: 1;
+        ` : 
+        css`
+          transform: translateX(-50%);
+          opacity: 0;
+          transition: .8s;
+        `
+    }
     .main_title {
       border-bottom: 1px solid black;
       padding: 1vmin;
