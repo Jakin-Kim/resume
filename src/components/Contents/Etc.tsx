@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import data from "../../data/data.json";
+import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 
 function Etc() {
 
@@ -7,12 +8,14 @@ function Etc() {
   
   return (
     <Styled.etc id="etc">
-      <div className="main_title">기타</div>
+      <div className="main_title" {...useScrollFadeIn('up', 1, 0)}>기타</div>
+      <Styled.contents {...useScrollFadeIn('up', 1, 0)}>
       {etc.map(item => 
-        <Styled.contents key={item.id}>
+        <div key={item.id}>
           <div className='title'>{item.title}</div>
           <div className='period'>{item.period}</div>
-        </Styled.contents>)}
+        </div>)}
+        </Styled.contents>
     </Styled.etc>
   )
 }
@@ -22,6 +25,8 @@ export default Etc;
 const Styled = {
   etc: styled.div`
     margin: 8vmin;
+    z-index: 0;
+    
     .main_title {
       border-bottom: 1px solid black;
       padding: 1vmin;

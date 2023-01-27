@@ -1,5 +1,6 @@
-import styled from "styled-components"
-import data from "../../data/data.json"
+import styled from "styled-components";
+import data from "../../data/data.json";
+import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 
 function Activity() {
 
@@ -7,20 +8,23 @@ function Activity() {
 
   return (
     <Styled.activity id="activity">
-      <div className="main_title">활동</div>
-      {activities.map(ele => 
-        <Styled.contents key={ele.id}>
-          <div className='title'>{ele.title}</div>
-          <div className='period'>{ele.period}</div>
-          <div className='description'>
-            <div>{'<Description>'}</div>
-            <li>{ele.description}</li>
-          </div>
-          <div className='whatidid'>
-            <div>{'<What I did>'}</div>
-            {ele.whatidid.map(ele => <li key={ele}>{ele}</li>)}
-          </div>
-        </Styled.contents>)}
+      <div className="main_title" {...useScrollFadeIn('up', 1, 0)}>활동</div>
+        <Styled.contents {...useScrollFadeIn('up', 1, 0)}>
+          {activities.map(ele => 
+            <div key={ele.id}>
+              <div className='title'>{ele.title}</div>
+              <div className='period'>{ele.period}</div>
+              <div className='description'>
+                <div>{'<Description>'}</div>
+                <li>{ele.description}</li>
+              </div>
+              <div className='whatidid'>
+                <div>{'<What I did>'}</div>
+                {ele.whatidid.map(ele => <li key={ele}>{ele}</li>)}
+              </div>
+            </div>
+          )}
+        </Styled.contents>
     </Styled.activity>
   )
 }
@@ -30,6 +34,7 @@ export default Activity
 const Styled = {
   activity: styled.div`
     margin: 8vmin;
+    z-index: 0;
     .main_title {
       border-bottom: 1px solid black;
       padding: 1vmin;

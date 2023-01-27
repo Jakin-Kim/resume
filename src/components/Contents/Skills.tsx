@@ -39,6 +39,7 @@ export default Skills;
 const Styled = {
   skills: styled.div`
     margin: 8vmin;
+    z-index: 0;
     .title {
       border-bottom: 1px solid black;
       padding: 1vmin;

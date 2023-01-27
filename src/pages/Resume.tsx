@@ -7,7 +7,6 @@ import NavBar from "../components/NavBar";
 import Contents from "../components/Contents";
 import ScrollIndicator from "../components/ScrollIndicator";
 import { IntroType } from "../types/meta";
-import theme from "../styles/theme";
 
 function Resume() {  
 
@@ -21,12 +20,8 @@ function Resume() {
         <ScrollIndicator/>
         <div className="dark-mode-wrapper">
           {isDark ? 
-            <MdLightMode 
-              className="light" 
-              onClick={changeMode}/> : 
-            <MdDarkMode 
-              className="dark" 
-              onClick={changeMode}/>}
+            <MdLightMode className="light" onClick={changeMode}/> : 
+            <MdDarkMode className="dark" onClick={changeMode}/>}
         </div>
         <Header intro={intro}/>
         <NavBar isDark={isDark}/>

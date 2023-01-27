@@ -48,7 +48,7 @@ const Styled = {
     justify-content: center;
     align-items: center;
     height: 8vh;
-
+    z-index: 1;
     .nav-btn {
       border-left: .5px solid gray;
       border-right: .5px solid gray;

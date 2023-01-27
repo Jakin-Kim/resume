@@ -1,25 +1,25 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import data from "../../data/data.json";
-import { IntersectionObserverType } from "../../types/meta";
+import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 
-function Education(
-    {eleIsVisible, className, animationRef}: IntersectionObserverType
-  ) {
+function Education() {
 
   const { education } = data.contents;
 
   return (
-    <Styled.education id="education" ref={animationRef} eleIsVisible={eleIsVisible}>
-      <div className="main_title">교육</div>
-      {education.map(edu => 
-        <Styled.contents key={edu.id}>
-          <div className='title'>{edu.title}</div>
-          <div className='period'>{edu.period}</div>
-          <div className='description'>{edu.description}</div>
-          <div className='whatidid'>
-            {edu.whatidid.map(edu => <li key={edu}>{edu}</li>)}
-          </div>
-        </Styled.contents>)}
+    <Styled.education id="education">
+      <div className="main_title" {...useScrollFadeIn('up', 1, 0)}>교육</div>
+        <Styled.contents {...useScrollFadeIn('up', 1, 0)}>
+        {education.map(edu => 
+          <div key={edu.id}>
+            <div className='title'>{edu.title}</div>
+            <div className='period'>{edu.period}</div>
+            <div className='description'>{edu.description}</div>
+            <div className='whatidid'>
+              {edu.whatidid.map(edu => <li key={edu}>{edu}</li>)}
+            </div>
+          </div>)}
+        </Styled.contents>
     </Styled.education>
   )
 }
@@ -27,19 +27,10 @@ function Education(
 export default Education
 
 const Styled = {
-  education: styled.div<{eleIsVisible: boolean}>`
+  education: styled.div`
     margin: 8vmin;
-    ${props => props.eleIsVisible ? 
-        css`
-          transform: translateX(0);
-          opacity: 1;
-        ` : 
-        css`
-          transform: translateX(-50%);
-          opacity: 0;
-          transition: .8s;
-        `
-    }
+    z-index: 0;
+
     .main_title {
       border-bottom: 1px solid black;
       padding: 1vmin;
